@@ -164,7 +164,7 @@ def plot_heatmap(filtered_normalized_graph, parties, filename):
     correlation_array = np.array(correlation_matrix)
 
     # Plotar o heatmap usando Matplotlib
-    plt.figure(figsize=(11, 10))
+    plt.figure(figsize=(11, 9))
     plt.imshow(correlation_array, cmap='hot', interpolation='nearest', aspect='auto')
     plt.colorbar(label='Correlação')
     
