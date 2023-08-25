@@ -206,11 +206,12 @@ def plot_graph(thresholded_inverted_graph, filename, graph_saved_label=None, gra
     # Rotacionando os nós para facilitar a visualização
     party_colors = {}
     unique_parties = set(nx.get_node_attributes(thresholded_inverted_graph, 'partido').values())
-    color_palette = plt.get_cmap('tab20')
-    color_palette = ListedColormap(color_palette.colors[:len(unique_parties)])
     
+    dark_color_palette = plt.get_cmap('tab10')
+    
+    party_colors = {}
     for idx, party in enumerate(unique_parties):
-        party_colors[party] = color_palette(idx)
+        party_colors[party] = dark_color_palette(idx)
     
     # Definindo cores dos nós com base no partido
     node_colors = [party_colors[thresholded_inverted_graph.nodes[node]['partido']] for node in thresholded_inverted_graph.nodes()]
