@@ -219,11 +219,9 @@ def plot_graph(thresholded_inverted_graph, filename, graph_saved_label=None, gra
     # Desenhando o grafo
     nx.draw(
         thresholded_inverted_graph,
-        #rotated_pos,
         pos,
         with_labels=False,
         node_size=node_sizes,
-        #node_size=60,
         font_size=5,
         alpha=0.7,
         edge_color='black',
